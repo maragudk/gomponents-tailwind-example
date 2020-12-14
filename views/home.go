@@ -1,11 +1,12 @@
 package views
 
 import (
+	"github.com/go-chi/chi"
 	g "github.com/maragudk/gomponents"
 	. "github.com/maragudk/gomponents/html"
 )
 
-func Home() g.Node {
+func Home(routes []chi.Route) g.Node {
 	return Div(
 		Headline("Home"),
 		P(
@@ -17,6 +18,13 @@ func Home() g.Node {
 			TextLink("https://www.maragu.dk/blog/building-view-components-with-gomponents-and-tailwindcss-in-go/",
 				"Building view components with gomponents and TailwindCSS in Go"),
 			g.Text("."),
+		),
+
+		SubHeadline("Routes declared in this app"),
+		Ul(
+			g.Map(len(routes), func(i int) g.Node {
+				return Li(g.Text(routes[i].Pattern))
+			})...,
 		),
 	)
 }
