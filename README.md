@@ -1,8 +1,11 @@
 # gomponents + tailwind example
 
-This projects shows how to use [gomponents](https://github.com/maragudk/gomponents) together with [TailwindCSS](https://tailwindcss.com).
+This projects shows how to use [gomponents](https://github.com/maragudk/gomponents) together
+with [TailwindCSS](https://tailwindcss.com).
 
-See the blog post on [Using gomponents with TailwindCSS in Go](https://www.maragu.dk/blog/using-gomponents-with-tailwindcss-in-go/) for background.
+See the blog post
+on [Building view components with gomponents and TailwindCSS in Go](https://www.maragu.dk/blog/building-view-components-with-gomponents-and-tailwindcss-in-go/)
+for background.
 
 ## Usage
 
