@@ -20,7 +20,7 @@ func Page(p Props) g.Node {
 			Link(Rel("stylesheet"), Href("/static/styles/app.css"), Type("text/css")),
 		},
 		Body: []g.Node{
-			Nav(Class("bg-gray-700"),
+			Nav(Class("bg-gradient-to-br from-blue-700 to-indigo-300 py-2"),
 				Container(
 					Div(Class("flex items-baseline space-x-4"),
 						NavbarLink("/", "Home", p.Path),
@@ -38,4 +38,17 @@ func Page(p Props) g.Node {
 // Container restricts the width of the children, centers, and adds some padding.
 func Container(children ...g.Node) g.Node {
 	return Div(Class("max-w-7xl mx-auto px-4"), g.Group(children))
+}
+
+func NavbarLink(path, text, currentPath string) g.Node {
+	active := path == currentPath
+
+	return A(Href(path),
+		c.Classes{
+			"p-3 text-sm font-medium focus:text-white": true,
+			"text-white":                     active,
+			"text-gray-300 hover:text-white": !active,
+		},
+		g.Text(text),
+	)
 }
