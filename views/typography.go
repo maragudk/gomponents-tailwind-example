@@ -6,11 +6,11 @@ import (
 )
 
 func Headline(text string) g.Node {
-	return H1(text, Class("text-3xl font-bold text-gray-900 my-6"))
+	return H1(g.Text(text), Class("text-3xl font-bold text-gray-900 my-6"))
 }
 
 func SubHeadline(text string) g.Node {
-	return H2(text, Class("text-2xl font-bold text-gray-900 my-6"))
+	return H2(g.Text(text), Class("text-2xl font-bold text-gray-900 my-6"))
 }
 
 func TextLink(href, text string) g.Node {
