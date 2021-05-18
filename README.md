@@ -1,6 +1,6 @@
 # gomponents + tailwind example
 
-This projects shows how to use [gomponents](https://github.com/maragudk/gomponents) together
+This projects shows how to use [gomponents](https://www.gomponents.com) together
 with [TailwindCSS](https://tailwindcss.com).
 
 See the blog post
