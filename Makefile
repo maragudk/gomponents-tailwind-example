@@ -1,10 +1,10 @@
-.PHONY: build-css build-css-dev start
+.PHONY: build start watch
 
-build-css:
-	NODE_ENV=production npx tailwindcss-cli@latest build views/app.css -o public/styles/app.css
-
-build-css-dev:
-	NODE_ENV=development npx tailwindcss-cli@latest build views/app.css -o public/styles/app.css
+build:
+	NODE_ENV=production ./node_modules/.bin/postcss build tailwind.css -o public/styles/app.css
 
 start:
 	go run cmd/server/*.go
+
+watch:
+	NODE_ENV=development ./node_modules/.bin/postcss build tailwind.css -o public/styles/app.css -w

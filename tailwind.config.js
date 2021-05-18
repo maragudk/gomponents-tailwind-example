@@ -1,6 +1,7 @@
 module.exports = {
+  mode: "jit",
   purge: [
-    "./views/*.go",
+    "./views/**/*.go",
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
